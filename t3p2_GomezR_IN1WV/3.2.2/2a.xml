@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- APARTADO 2 A -->
+<!DOCTYPE numeros [
+<!ELEMENT numeros (numero)>
+<!ELEMENT numero (#PCDATA)>
+]>
+<!-- El ELEMENT declarado no tiene hijos lo incluyo -->
+<numeros>
+	<numero>25</numero>
+</numeros> 

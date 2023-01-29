@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE animales [
+<!ELEMENT animales (animal)*>
+<!ELEMENT animal (#PCDATA)>
+]>
+<animales>
+ 
+	<animal>Caniche</animal>
+       <animal>Siamés</animal>
+ 
+</animales>
+<!-- SOLUCION : "#PADATA" le falta parentesis y cerrar corchete ]>
+                 falta etiqueta <animal></animal> que coja a perro y gato
+                Para ello cambiar la etiqueta "perro" y "gato" por "animal" -->

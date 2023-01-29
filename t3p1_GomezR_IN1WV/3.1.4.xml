@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--APARTADO 4: Paises de Wikipedis -->
+<paises>
+    <pais>
+        <capital>Bucarest</capital>
+        <idioma>Nueva Delhi</idioma>
+        <forma_gobierno tipo ="Republica_semipresidencialista">
+            <presidente></presidente>
+            <primer_ministro></primer_ministro>    
+            <organo_legistalitvo></organo_legistalitvo>
+        </forma_gobierno>
+        <formacion_pais>
+            <hecho anyo="1330"> Principado Valaco</hecho>
+            <hecho anyo="1330"> Principado Valaco</hecho>
+            <hecho anyo="1330"> Principado Valaco</hecho>
+            <hecho anyo="1330"> Principado Valaco</hecho>
+            <hecho anyo="1330"> Principado Valaco</hecho>
+            <hecho anyo="1330"> Principado Valaco</hecho>
+            <hecho anyo="1330"> Principado Valaco</hecho>
+            <hecho anyo="1330"> Principado Valaco</hecho>
+        </formacion_pais>
+        <superficie ranking = "83">
+            <sup_total></sup_total>
+            <sup_agua></sup_agua>
+            <fronteras></fronteras>
+        </superficie>
+    </pais>
+    <!-- Guardar el "continente" en un atributo  -->
+</paises>

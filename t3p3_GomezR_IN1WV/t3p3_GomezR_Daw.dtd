@@ -1,0 +1,34 @@
+<!ELEMENT ticket (datosTicket,datosComercio,datosCompra)>
+<!ATTLIST ticket cod NMTOKEN #REQUIRED>
+<!ELEMENT datosTicket (fecha,hora,precioTotal,formaPago,imgticket)>
+<!ELEMENT fecha (dia,mes,ano)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT ano (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT precioTotal (precioSinIva,pvp)>
+<!ATTLIST precioTotal moneda NMTOKEN #REQUIRED>
+<!ELEMENT precioSinIva (#PCDATA)>
+<!ELEMENT pvp (#PCDATA)>
+<!ATTLIST pvp iva CDATA #REQUIRED>
+<!ELEMENT formaPago (tarjeta)>
+<!ATTLIST formaPago tipo NMTOKEN #REQUIRED>
+<!ELEMENT tarjeta (numero,cliente)>
+<!ATTLIST tarjeta tipo NMTOKEN #REQUIRED>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT cliente (#PCDATA)>
+<!ELEMENT imgticket EMPTY>
+<!ATTLIST imgticket nombre NMTOKEN #REQUIRED>
+<!ATTLIST imgticket formato NMTOKEN #REQUIRED>
+<!ELEMENT datosComercio (nombre,dir,cif,telf)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT dir (#PCDATA)>
+<!ELEMENT cif (#PCDATA)>
+<!ELEMENT telf (#PCDATA)>
+<!ELEMENT datosCompra (lineaCompra+)>
+<!ELEMENT lineaCompra (nombre,cantidad,precio,pvpLinea)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio iva CDATA #REQUIRED>
+<!ELEMENT pvpLinea (#PCDATA)>
+<!ENTITY G "entity-value">

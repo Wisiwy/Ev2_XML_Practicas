@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--APARTADO 3 : bbdd personalizada -->
+<dioses>
+    <dios id = "1">
+        <nombre>Zeus</nombre>
+        <origen>
+            <padre></padre>
+            <madre></madre>
+            <nacimiento></nacimiento>
+        </origen>
+        <progenie>
+            <numero></numero>
+            <dios idRef = "3"/> 
+        </progenie>
+        <reino>Dios de dioses</reino>
+        <episodio descripcion = "Engendrar Heracles">
+            <implicado></implicado>
+            <descripcion></descripcion>
+        </episodio>
+    </dios>
+    <!-- Guardar el "continente" en un atributo  -->
+</dioses>

@@ -1,0 +1,17 @@
+<!ELEMENT reparaciones (reparacion)+>
+
+<!ELEMENT reparacion (vehiculo,trabajoRealizado+,factura+)>
+<!--CARDINALIDADES: las cardinalidades despues de cada hijo y si esta fuera 
+afecta a todo el parentesis -->
+<!ELEMENT vehiculo (matricula, marca, modelo)>
+<!ELEMENT matricula (#PCDATA)>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT trabajoRealizado (desc*, duracion+)>
+<!ELEMENT desc (#PCDATA)>
+<!ELEMENT duracion (#PCDATA)>
+<!ELEMENT factura (cod, totalAPagar, modoPago)>
+<!ELEMENT cod (#PCDATA)>
+<!ELEMENT totalAPagar (#PCDATA)>
+<!ELEMENT modoPago (#PCDATA)>
+<!-- -->
