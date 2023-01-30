@@ -7,19 +7,17 @@
 <!ELEMENT ano (#PCDATA)>
 <!ELEMENT hora (#PCDATA)>
 <!ELEMENT precioTotal (precioSinIva,pvp)>
-<!ATTLIST precioTotal moneda NMTOKEN #REQUIRED>
+<!ATTLIST precioTotal moneda (Euro |Rublo | Peseta | Sestercio ) #REQUIRED>
 <!ELEMENT precioSinIva (#PCDATA)>
 <!ELEMENT pvp (#PCDATA)>
 <!ATTLIST pvp iva CDATA #REQUIRED>
-<!ELEMENT formaPago (tarjeta)>
-<!ATTLIST formaPago tipo NMTOKEN #REQUIRED>
-<!ELEMENT tarjeta (numero,cliente)>
-<!ATTLIST tarjeta tipo NMTOKEN #REQUIRED>
-<!ELEMENT numero (#PCDATA)>
-<!ELEMENT cliente (#PCDATA)>
+<!ELEMENT formaPago (din_entregado,cambios)>
+<!ATTLIST formaPago tipo (efectivo|tarjeta) #REQUIRED>
+<!ELEMENT din_entregado (#PCDATA)>
+<!ELEMENT cambios (#PCDATA)>
 <!ELEMENT imgticket EMPTY>
 <!ATTLIST imgticket nombre NMTOKEN #REQUIRED>
-<!ATTLIST imgticket formato NMTOKEN #REQUIRED>
+<!ATTLIST imgticket formato NOTATION (jpg|png) >
 <!ELEMENT datosComercio (nombre,dir,cif,telf)>
 <!ELEMENT nombre (#PCDATA)>
 <!ELEMENT dir (#PCDATA)>
@@ -32,3 +30,7 @@
 <!ATTLIST precio iva CDATA #REQUIRED>
 <!ELEMENT pvpLinea (#PCDATA)>
 <!ENTITY G "21">
+<!ENTITY R "10">
+<!ENTITY S "4">
+<!NOTATION jpg SYSTEM "image/jpg/" >
+<!NOTATION png SYSTEM "image/png/" >

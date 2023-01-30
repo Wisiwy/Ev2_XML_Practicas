@@ -1,0 +1,87 @@
+<!DOCTYPE ticket SYSTEM "./3_Ticket_compra-modificacion.dtd/">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ticket cod="9923123">
+    <datosTicket>
+        <fecha>
+            <dia>12</dia>
+            <mes>12</mes>
+            <ano>2022</ano>
+        </fecha>
+        <hora>12:00:21</hora>
+        <precioTotal moneda="Rublo">
+            <precioSinIva>11</precioSinIva>
+            <pvp iva="&S;">12,20</pvp>
+        </precioTotal>
+        <formaPago tipo="efectivo">
+            <din_entregado>15</din_entregado>
+            <cambios>2,80</cambios>
+        </formaPago>
+        <imgticket nombre ="ticket13" formato= "png">
+        </imgticket>
+    </datosTicket>
+    <datosComercio>
+        <nombre>Ikea</nombre>
+        <dir>C/falsa 123</dir>
+        <cif>S12343214a</cif>
+        <telf>976124223</telf>
+    </datosComercio>
+    <datosCompra>
+        <lineaCompra>
+            <nombre>jujgwer mueble</nombre>
+            <cantidad>2</cantidad>
+            <precio iva = "&S;">42</precio>
+            <pvpLinea>32</pvpLinea>
+        </lineaCompra>
+        <lineaCompra>
+            <nombre>adsfñlkas  mueble</nombre>
+            <cantidad>3</cantidad>
+            <precio iva = "&S;">554</precio>
+            <pvpLinea>123</pvpLinea>
+    
+        </lineaCompra>
+    </datosCompra>
+
+</ticket>
+<ticket cod="991233123">
+    <datosTicket>
+        <fecha>
+            <dia>12</dia>
+            <mes>12</mes>
+            <ano>2022</ano>
+        </fecha>
+        <hora>12:00:21</hora>
+        <precioTotal moneda="Rublo">
+            <precioSinIva>11</precioSinIva>
+            <pvp iva="&S;">12,20</pvp>
+        </precioTotal>
+        <formaPago tipo="efectivo">
+            <din_entregado>15</din_entregado>
+            <cambios>2,80</cambios>
+        </formaPago>
+        <imgticket nombre ="ticket13" formato= "png">
+        </imgticket>
+    </datosTicket>
+    <datosComercio>
+        <nombre>Ikea</nombre>
+        <dir>C/falsa 123</dir>
+        <cif>S12343214a</cif>
+        <telf>976124223</telf>
+    </datosComercio>
+    <datosCompra>
+        <lineaCompra>
+            <nombre>jujgwer mueble</nombre>
+            <cantidad>2</cantidad>
+            <precio iva = "&S;">42</precio>
+            <pvpLinea>32</pvpLinea>
+        </lineaCompra>
+        <lineaCompra>
+            <nombre>adsfñlkas  mueble</nombre>
+            <cantidad>3</cantidad>
+            <precio iva = "&S;">554</precio>
+            <pvpLinea>123</pvpLinea>
+    
+        </lineaCompra>
+    </datosCompra>
+
+</ticket>

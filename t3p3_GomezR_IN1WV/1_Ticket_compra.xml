@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ticket cod="t00037">
+
+<!DOCTYPE ticket SYSTEM "2_Ticket_compra.dtd">
+<ticket cod="t00038">
     <datosTicket>
         <fecha>
             <dia>22</dia>
@@ -13,8 +15,8 @@
         </precioTotal>
         <!-- APARTADO 1: CAMBIAR FORMA DE PAGO -->
         <formaPago tipo="efectivo">
-            <din_entregado>10</din_entregado>
-            <cambios>8</cambios>
+            <din_entregado>15</din_entregado>
+            <cambios>2,25</cambios>
         </formaPago>
         <!-- ++++++++++++++++++++++++++++++ -->
         <imgticket nombre="ticket12" formato="jpg" />
@@ -29,13 +31,13 @@
         <lineaCompra>
             <nombre>Barra Pan</nombre>
             <cantidad>10</cantidad>
-            <precio iva= ”&G;”>1</precio>
+            <precio iva ="&G;">1</precio>
             <pvpLinea>12,1</pvpLinea>
         </lineaCompra>
         <lineaCompra>
             <nombre>Palmera</nombre>
             <cantidad>1</cantidad>
-            <precio i va= ”&G;”>0.5</precio>
+            <precio iva="&G;">0.5</precio>
             <pvpLinea>0.65</pvpLinea>
         </lineaCompra>
     </datosCompra>
