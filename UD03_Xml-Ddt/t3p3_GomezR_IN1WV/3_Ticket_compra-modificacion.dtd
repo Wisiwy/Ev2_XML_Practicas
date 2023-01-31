@@ -1,3 +1,5 @@
+
+<!ELEMENT tickets (ticket)*>
 <!ELEMENT ticket (datosTicket,datosComercio,datosCompra)+>
 <!ATTLIST ticket cod CDATA #REQUIRED>
 <!ELEMENT datosTicket (fecha,hora,precioTotal,formaPago,imgticket)>
@@ -10,11 +12,14 @@
 <!ATTLIST precioTotal moneda (Euro |Rublo | Peseta | Sestercio ) #REQUIRED>
 <!ELEMENT precioSinIva (#PCDATA)>
 <!ELEMENT pvp (#PCDATA)>
-<!ATTLIST pvp iva CDATA #REQUIRED>
-<!ELEMENT formaPago (din_entregado,cambios)>
+<!ATTLIST pvp iva CDATA #REQUIRED ENTITIES (&S;| &R; |&G;)>
 <!ATTLIST formaPago tipo (efectivo|tarjeta) #REQUIRED>
+<!ELEMENT efectivo (din_entregado,cambios)>
 <!ELEMENT din_entregado (#PCDATA)>
 <!ELEMENT cambios (#PCDATA)>
+<!ELEMENT tarjeta (numero,cliente)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT cliente (#PCDATA)>
 <!ELEMENT imgticket EMPTY>
 <!ATTLIST imgticket nombre NMTOKEN #REQUIRED>
 <!ATTLIST imgticket formato NOTATION (jpg|png) >
