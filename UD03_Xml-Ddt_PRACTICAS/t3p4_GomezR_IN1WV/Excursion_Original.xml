@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viaje xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="Excursion_Original.xsd">
+	<fecha>2019-01-31</fecha>
+	<hora>06:30:00</hora>
+	<precio>25.0</precio>
+	<participantes>
+		<participante>
+			<nombre>Juan Ignacio</nombre>
+			<apellidos>Farray</apellidos>
+			<nif>00000000A</nif>
+			<fechaNac>1985-10-10</fechaNac>
+			<profesor>
+				<telf>655444444</telf>
+				<mail>jif@losenlaces.com</mail>
+			</profesor>
+		</participante>
+		<participante>
+			<nombre>Marco</nombre>
+			<apellidos>Aurelio</apellidos>
+			<nif>11111111B</nif>
+			<fechaNac>2005-05-05</fechaNac>
+			<alumno>
+				<telfPadre>555222222</telfPadre>
+				<telfMadre>555666666</telfMadre>
+				<grupo>IN1</grupo>
+				<humor>true</humor>
+			</alumno>
+		</participante>
+	</participantes>
+</viaje>

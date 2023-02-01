@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="viaje">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fecha" type="xs:date" />
+                <xs:element name="hora" type="xs:time" />
+                <xs:element name="precio" type="xs:double" />
+
+
+                <xs:element name="participantes">
+                    <xs:complexType>
+
+                        <xs:element name="participante" maxOccurs = "70">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="nombre" type="xs:string"/>
+                                    <xs:element name="apellido" type="xs:string"/>
+                                    <xs:element name="nif" type="xs:string"/>
+                                    <xs:element name="fechaNac" type="xs:date"/>
+                                    <xs:element name="profesor">
+                                        <complexType>
+                                        <xs:sequence>
+                                            <xs:element name = "telf" type = "xs:positiveInteger" />
+                                            <xs:element name = "mail" type = "xs:string" />
+                                        </xs:sequence>
+
+                                        </complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+
+                        </xs:element>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+
+
+        </xs:complexType>
+
+
+    </xs:element>
+
+</xs:schema>
