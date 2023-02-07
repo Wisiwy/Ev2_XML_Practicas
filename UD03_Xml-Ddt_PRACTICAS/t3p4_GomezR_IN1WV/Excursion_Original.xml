@@ -7,7 +7,7 @@
 	<participantes>
 		<participante>
 			<nombre>Juan Ignacio</nombre>
-			<apellidos>Farray</apellidos>
+			<apellido>Farray</apellido>
 			<nif>00000000A</nif>
 			<fechaNac>1985-10-10</fechaNac>
 			<profesor>
@@ -17,7 +17,7 @@
 		</participante>
 		<participante>
 			<nombre>Marco</nombre>
-			<apellidos>Aurelio</apellidos>
+			<apellido>Aurelio</apellido>
 			<nif>11111111B</nif>
 			<fechaNac>2005-05-05</fechaNac>
 			<alumno>

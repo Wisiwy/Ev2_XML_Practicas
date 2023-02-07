@@ -6,40 +6,85 @@
                 <xs:element name="fecha" type="xs:date" />
                 <xs:element name="hora" type="xs:time" />
                 <xs:element name="precio" type="xs:double" />
-
-
-                <xs:element name="participantes">
+                <xs:element name="participantes" maxOccurs="70">
                     <xs:complexType>
-
-                        <xs:element name="participante" maxOccurs = "70">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="nombre" type="xs:string"/>
-                                    <xs:element name="apellido" type="xs:string"/>
-                                    <xs:element name="nif" type="xs:string"/>
-                                    <xs:element name="fechaNac" type="xs:date"/>
-                                    <xs:element name="profesor">
-                                        <complexType>
-                                        <xs:sequence>
-                                            <xs:element name = "telf" type = "xs:positiveInteger" />
-                                            <xs:element name = "mail" type = "xs:string" />
-                                        </xs:sequence>
-
-                                        </complexType>
-                                    </xs:element>
-                                </xs:sequence>
-                            </xs:complexType>
-
-                        </xs:element>
+                        <xs:sequence>
+                            <xs:element name="participante" maxOccurs="70">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre">
+                                            <xs:simpleType>
+                                                <!-- Valor max nombre -->
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="15" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="apellido">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <!-- Valor max apellido -->
+                                                    <xs:maxLength value="20" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="nif">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <!-- Patron DNI -->
+                                                    <xs:pattern value="[0-9]{9}[A-Z]" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="fechaNac" type="xs:date" />
+                                        <!-- CHOICE: Alumno y profesor -->
+                                        <xs:choice>
+                                            <!-- PROFESOR -->
+                                            <xs:element name="profesor">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="mail">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:string">
+                                                                    <xs:pattern value="[.]+[@][A-Z,a-z]+[.com]" />
+                                                                    
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:element>
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                            <!-- ALUMNO -->
+                                            <xs:element name="alumno">
+                                                <xs:complexType>
+                                                    <xs:sequence>
+                                                        <xs:element name="telfPadre" minOccurs="0" maxOccurs="1">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:integer">
+                                                                    <xs:pattern value="[0-9]{9}" />
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:element>
+                                                        <xs:element name="telfMadre" minOccurs="0" maxOccurs="1">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:integer">
+                                                                    <xs:pattern value="[0-9]{9}" />
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:element>
+                                                        <xs:element name="grupo" type="xs:string" />
+                                                        <xs:element name="humor" type="xs:boolean" />
+                                                    </xs:sequence>
+                                                </xs:complexType>
+                                            </xs:element>
+                                        </xs:choice>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-
             </xs:sequence>
-
-
         </xs:complexType>
-
-
     </xs:element>
-
 </xs:schema>
