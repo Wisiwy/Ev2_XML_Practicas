@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="t3p5_encuesta.xsd"?>
+<encuestas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="file:t3p5_encuesta.xsd">
+	<alumno id_encuesta="5">
+		<datosAlumno dni="12345678A">
+			<nombre>Pepe</nombre>
+			<apellidos>Romero</apellidos>
+			<grupo>DAM</grupo>
+		</datosAlumno>
+		<organizacion>
+			<enunciado> Valore cada uno de los aspectos de la organización del viaje, siendo 0 nada satisfecho y 5 muy satisfecho.</enunciado>
+			<viaje>5</viaje>
+			<visitas>5</visitas>
+			<comida>5</comida>
+		</organizacion>
+		<visitasRealizadas>
+			<enunciado> Valore cada uno de los aspectos de la organización del viaje, siendo 0 nada satisfecho y 5 muy satisfecho.</enunciado>
+			<mareNostrum >3</mareNostrum>
+			<museo >1</museo>
+		</visitasRealizadas>
+		<valoracion>Muy Satisfecho</valoracion>
+		<comentario>Repetiría sin duda, lo mejor del viaje fué la vuelta a Zaragoza</comentario>
+	</alumno>
+</encuestas>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="encuestas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="alumno">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="datosAlumno">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string" />
+                                        <xs:element name="apellidos" type="xs:string" />
+                                        <xs:element name="grupo">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="DAM"></xs:enumeration>
+                                                    <xs:enumeration value="DAW"></xs:enumeration>
+                                                    <xs:enumeration value="ASIR"></xs:enumeration>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <!-- PATRON DE DNI -->
+                                    <xs:attribute name="dni" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="[0-9]{9}[A-Z]" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="organizacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="enunciado" type="xs:string" />
+                                        <xs:element name="viaje">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                     <xs:minInclusive value="0"/>
+                                                     <xs:maxInclusive value="5"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="visitas" >
+                                            <xs:simpleType name = "cinco">
+                                                <xs:restriction base="xs:integer">
+                                                     <xs:minInclusive value="0"/>
+                                                     <xs:maxInclusive value="5"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="comida" type="cinco"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="visitasRealizadas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="enunciado" type="xs:string" />
+                                        <xs:element name="mareNostrum" type="xs:string" />
+                                        <xs:element name="museo" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="valoracion" type="xs:string" />
+                            <xs:element name="comentario" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                    <xs:attribute name="id_encuesta" use="required" />
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

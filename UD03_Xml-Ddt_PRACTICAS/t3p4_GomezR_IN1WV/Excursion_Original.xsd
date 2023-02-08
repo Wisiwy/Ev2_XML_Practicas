@@ -46,8 +46,9 @@
                                                         <xs:element name="mail">
                                                             <xs:simpleType>
                                                                 <xs:restriction base="xs:string">
-                                                                    <xs:pattern value="[.]+[@][A-Z,a-z]+[.com]" />
-                                                                    
+                                                                    <xs:pattern
+                                                                        value="[.]+[@][A-Z,a-z]+[.com]" />
+
                                                                 </xs:restriction>
                                                             </xs:simpleType>
                                                         </xs:element>
@@ -58,14 +59,16 @@
                                             <xs:element name="alumno">
                                                 <xs:complexType>
                                                     <xs:sequence>
-                                                        <xs:element name="telfPadre" minOccurs="0" maxOccurs="1">
+                                                        <xs:element name="telfPadre" minOccurs="0"
+                                                            maxOccurs="1">
                                                             <xs:simpleType>
                                                                 <xs:restriction base="xs:integer">
                                                                     <xs:pattern value="[0-9]{9}" />
                                                                 </xs:restriction>
                                                             </xs:simpleType>
                                                         </xs:element>
-                                                        <xs:element name="telfMadre" minOccurs="0" maxOccurs="1">
+                                                        <xs:element name="telfMadre" minOccurs="0"
+                                                            maxOccurs="1">
                                                             <xs:simpleType>
                                                                 <xs:restriction base="xs:integer">
                                                                     <xs:pattern value="[0-9]{9}" />
