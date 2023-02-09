@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- DEFINO UN TIPO DE RESTRICCION -->
+    <xs:simpleType name="cinco">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="5" />
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- ESQUEMA ENCUESTA -->
     <xs:element name="encuestas">
         <xs:complexType>
             <xs:sequence>
@@ -11,6 +20,7 @@
                                     <xs:sequence>
                                         <xs:element name="nombre" type="xs:string" />
                                         <xs:element name="apellidos" type="xs:string" />
+                                        <!-- Grupo;DAM,DAW,ASIR -->
                                         <xs:element name="grupo">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:string">
@@ -34,24 +44,11 @@
                             <xs:element name="organizacion">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="enunciado" type="xs:string" />
-                                        <xs:element name="viaje">
-                                            <xs:simpleType>
-                                                <xs:restriction base="xs:integer">
-                                                     <xs:minInclusive value="0"/>
-                                                     <xs:maxInclusive value="5"/>
-                                                </xs:restriction>
-                                            </xs:simpleType>
-                                        </xs:element>
-                                        <xs:element name="visitas" >
-                                            <xs:simpleType name = "cinco">
-                                                <xs:restriction base="xs:integer">
-                                                     <xs:minInclusive value="0"/>
-                                                     <xs:maxInclusive value="5"/>
-                                                </xs:restriction>
-                                            </xs:simpleType>
-                                        </xs:element>
-                                        <xs:element name="comida" type="cinco"/>
+                                        <xs:element name="enunciado" type="xs:string" fixed="Aquí va un enunciado."/>
+
+                                        <xs:element name="viaje" type="cinco" />
+                                        <xs:element name="visitas" type="cinco" />
+                                        <xs:element name="comida" type="cinco" />
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
@@ -59,18 +56,41 @@
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="enunciado" type="xs:string" />
-                                        <xs:element name="mareNostrum" type="xs:string" />
-                                        <xs:element name="museo" type="xs:string" />
+                                        <xs:element name="mareNostrum" type="cinco" />
+                                        <xs:element name="museo" type="cinco" />
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="valoracion" type="xs:string" />
-                            <xs:element name="comentario" type="xs:string" />
+
+                            <xs:element name="valoracion">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:token">
+                                        <xs:enumeration value="Muy satisfecho" />
+                                        <xs:enumeration value="Satisfecho" />
+                                        <xs:enumeration value="Poco satisfecho" />
+                                        <xs:enumeration value="Nada satisfecho" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="comentario">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="300" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
-                    <xs:attribute name="id_encuesta" use="required" />
                 </xs:element>
             </xs:sequence>
+            <!-- Atributo de elemento raiz "ENCUESTA" -->
+            <xs:attribute name="id_encuesta" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="1000" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
 </xs:schema>
