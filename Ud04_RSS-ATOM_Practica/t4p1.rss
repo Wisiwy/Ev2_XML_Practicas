@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title> Ava Web Blog </title>
+        <link> https://www.avacoop.com/index.html </link>
+        <description> Canal de noticias de las ultimas novedades en el mundo micológico en AVA. </description>
+        <author>Raul Gomez</author>
+       
+        <item>
+            <!-- Llamadas a las secciones -->
+            <title>Nueva cesta de mimbre</title>
+            <link>https://www.avacoop.com/productos/</link>
+            <description>Cesta artesanal de mimbre 24x14. Genial para tus excursiones de recoleccion de setas </description>
+            <category>Herramientas</category>
+        </item>
+
+        <item>
+            <title>Valle de Hecho: paraiso micologico</title>
+            <link>https://www.avacoop.com/LM_HTML-CSS_Ev1/t2p8_GomezR_IN1WV/blog.html</link>
+            <description>Valle de Hecho Pirineos. turismo e info para vacaciones o fin de semana: 
+            alojamientos, bares y restaurantes, museos, centros de interpretación, salidas micológicas</description>
+            <author>Raul Gómez</author>
+            <category>Salidas</category>
+        </item>
+        
+        <item>
+            <title>Micobox: cultiva tus setas en casa</title>
+            <link>https://www.avacoop.com/proyectos/micobox</link>
+            <description>Micobox es el nuevo proyecto en el que estamos embarcados para promocionar
+            el autocultivo de setas y una economía circular.</description>
+            <author>Raul Gomez</author>
+            <comments></comments>
+        </item>
+
+    </channel>
+
+</rss>
