@@ -44,8 +44,8 @@
                             <xs:element name="organizacion">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="enunciado" type="xs:string" fixed="Aquí va un enunciado."/>
-
+                                        <xs:element name="enunciado" type="xs:string"
+                                            fixed="Aquí va un enunciado." />
                                         <xs:element name="viaje" type="cinco" />
                                         <xs:element name="visitas" type="cinco" />
                                         <xs:element name="comida" type="cinco" />
